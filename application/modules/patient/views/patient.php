@@ -538,7 +538,6 @@
 
             $('#editPatientForm').find('[name="id"]').val(response.patient.id).end()
             $('#editPatientForm').find('[name="name"]').val(response.patient.name).end()
-            $('#editPatientForm').find('[name="rut"]').val(response.patient.rut).end()
             $('#editPatientForm').find('[name="password"]').val(response.patient.password).end()
             $('#editPatientForm').find('[name="email"]').val(response.patient.email).end()
             $('#editPatientForm').find('[name="address"]').val(response.patient.address).end()
@@ -581,7 +580,6 @@
         $("#img1").attr("src", "uploads/cardiology-patient-icon-vector-6244713.jpg");
         $('.patientIdClass').html("").end()
         $('.nameClass').html("").end()
-        $('.rutClass').html("").end()
         $('.emailClass').html("").end()
         $('.addressClass').html("").end()
         $('.phoneClass').html("").end()
@@ -601,7 +599,6 @@
 
             $('.patientIdClass').append(response.patient.id).end()
             $('.nameClass').append(response.patient.name).end()
-            $('.rutClass').append(response.patient.name).end()
             $('.emailClass').append(response.patient.email).end()
             $('.addressClass').append(response.patient.address).end()
             $('.phoneClass').append(response.patient.phone).end()
