@@ -75,7 +75,6 @@ class Frontend extends MX_Controller {
 
 
         $p_name = $this->input->post('p_name');
-        $p_rut= $this->input->post('p_rut');
         $p_email = $this->input->post('p_email');
         if (empty($p_email)) {
             $p_email = $p_name . '-' . rand(1, 1000) . '-' . $p_name . '-' . rand(1, 1000) . '@example.com';
@@ -136,7 +135,6 @@ class Frontend extends MX_Controller {
                 $data_p = array(
                     'patient_id' => $patient_id,
                     'name' => $p_name,
-                    'rut' => $p_rut,
                     'email' => $p_email,
                     'phone' => $p_phone,
                     'sex' => $p_gender,

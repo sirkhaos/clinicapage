@@ -69,7 +69,6 @@ class Patient extends MX_Controller {
             $redirect = $this->input->post('redirect');
         }
         $name = $this->input->post('name');
-        $rut = $this->input->post('rut');
         $password = $this->input->post('password');
         $sms = $this->input->post('sms');
         $doctor = $this->input->post('doctor');
@@ -170,7 +169,6 @@ class Patient extends MX_Controller {
                     'patient_id' => $patient_id,
                     'img_url' => $img_url,
                     'name' => $name,
-                    'rut' => $rut,
                     'email' => $email,
                     'address' => $address,
                     'doctor' => $doctor,
@@ -187,7 +185,6 @@ class Patient extends MX_Controller {
                 $data = array(
                     'patient_id' => $patient_id,
                     'name' => $name,
-                    'rut' => $rut,
                     'email' => $email,
                     'doctor' => $doctor,
                     'address' => $address,
