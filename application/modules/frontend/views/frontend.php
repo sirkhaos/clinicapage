@@ -263,7 +263,7 @@
                                                         </select>
                                                     </div>
                                                     <label for=""> <?php echo lang('doctor'); ?></label>
-                                                    <select class="form-control" name="doctor" id="adoctors">
+                                                    <select class="form-control" name="doctor" id="doctors">
                                                         <option value="">Select .....</option>
                                                         <?php foreach ($doctors as $doctor) { ?>
                                                             <option value="<?php echo $doctor->id; ?>"<?php

@@ -41,6 +41,17 @@
                                             ?>' placeholder="">   
                                         </div>
                                         <div class="form-group">       
+                                            <label for="exampleInputEmail1">rut</label>
+                                            <input type="text" class="form-control" name="rut" id="exampleInputEmail1" value='<?php
+                                            if (!empty($setval)) {
+                                                echo set_value('rut');
+                                            }
+                                            if (!empty($accountant->rut)) {
+                                                echo $accountant->rut;
+                                            }
+                                            ?>' placeholder="">
+                                        </div>
+                                        <div class="form-group">       
                                             <label for="exampleInputEmail1">Password</label>
                                             <input type="password" class="form-control" name="password" id="exampleInputEmail1" placeholder="********">
                                         </div>
