@@ -27,6 +27,7 @@
                             <tr>
                                 <th><?php echo lang('patient_id'); ?></th>                        
                                 <th><?php echo lang('name'); ?></th>
+                                <th><?php echo lang('rut'); ?></th>
                                 <th><?php echo lang('phone'); ?></th>
                                 <?php if ($this->ion_auth->in_group(array('admin', 'Accountant', 'Receptionist'))) { ?>
                                     <th><?php echo lang('due_balance'); ?></th>
@@ -65,6 +66,7 @@
                                 <tr class="">
                                     <td> <?php echo $patient->id; ?></td>
                                     <td> <?php echo $patient->name; ?></td>
+                                    <td><?php echo $patient->rut; ?></td>
                                     <td><?php echo $patient->phone; ?></td>
 
 
@@ -99,12 +101,10 @@
 
                                     <td class="no-print">
                                         <a type="button" class="btn editbutton" title="<?php echo lang('edit'); ?>" data-toggle="modal" data-id="<?php echo $patient->id; ?>"><i class="fa fa-edit"></i> <?php echo lang('edit'); ?></a>
-
                                         <a class="btn detailsbutton" title="<?php echo lang('info'); ?>" href="patient/patientDetails?id=<?php echo $patient->id; ?>"><i class="fa fa-info"> </i> <?php echo lang('info'); ?></a> 
                                         <a class="btn green" title="<?php echo lang('history'); ?>" href="patient/medicalHistory?id=<?php echo $patient->id; ?>"><i class="fa fa-stethoscope"></i> <?php echo lang('history'); ?></a>
                                         <a class="btn detailsbutton" title="<?php echo lang('payment'); ?>" href="finance/patientPaymentHistory?patient=<?php echo $patient->id; ?>"><i class="fa fa-money"></i> <?php echo lang('payment'); ?></a>
                                         <a class="btn delete_button" title="<?php echo lang('delete'); ?>" href="patient/delete?id=<?php echo $patient->id; ?>" onclick="return confirm('Are you sure you want to delete this item?');"><i class="fa fa-trash-o"></i> <?php echo lang('delete'); ?></a>
-
 
                                     </td>
                                 </tr>
@@ -122,11 +122,6 @@
 </section>
 <!--main content end-->
 <!--footer start-->
-
-
-
-
-
 
 <!-- Add Patient Modal-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -172,6 +167,10 @@
 
                     </div>
 
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"><?php echo lang('rut'); ?></label>
+                        <input type="text" class="form-control" name="rut" id="exampleInputEmail1" value='' placeholder="">
+                    </div>
 
                     <div class="form-group">
                         <label for="exampleInputEmail1"><?php echo lang('email'); ?></label>
@@ -301,12 +300,18 @@
 
                     <div class="form-group">
 
+                        <label for="exampleInputEmail1"><?php echo lang('rut'); ?></label>
+                        <input type="text" class="form-control" name="rut" id="exampleInputEmail1" value='' placeholder="">
+
+                    </div>
+
+                    <div class="form-group">
+
 
                         <label for="exampleInputEmail1"><?php echo lang('password'); ?></label>
                         <input type="password" class="form-control" name="password" id="exampleInputEmail1" placeholder="********">
 
                     </div>
-
 
                     <div class="form-group">
                         <label for="exampleInputEmail1"><?php echo lang('email'); ?></label>
@@ -411,6 +416,7 @@
 
                                                         $('#editPatientForm').find('[name="id"]').val(response.patient.id).end()
                                                         $('#editPatientForm').find('[name="name"]').val(response.patient.name).end()
+                                                        $('#editPatientForm').find('[name="rut"]').val(response.patient.rut).end()
                                                         $('#editPatientForm').find('[name="password"]').val(response.patient.password).end()
                                                         $('#editPatientForm').find('[name="email"]').val(response.patient.email).end()
                                                         $('#editPatientForm').find('[name="address"]').val(response.patient.address).end()

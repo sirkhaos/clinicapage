@@ -64,6 +64,7 @@ $lang['create_new_hospital'] = 'Ajustes';
 $lang['add_department'] = 'Añadir Departamento';
 $lang['edit_department'] = 'Editar sección';
 $lang['name'] = 'Nombre';
+$lang['rut'] = 'Rut';
 $lang['description'] = 'Descripción';
 $lang['options'] = 'Opciones';
 $lang['print'] = 'Impresión';

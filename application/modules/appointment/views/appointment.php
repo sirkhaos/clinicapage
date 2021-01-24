@@ -321,9 +321,13 @@
                         </select>
                     </div>
                     <div class="pos_client clearfix col-md-6">
-                        <div class="payment pad_bot pull-right">
+                    <div class="payment pad_bot pull-right">
                             <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('name'); ?></label> 
                             <input type="text" class="form-control pay_in" name="p_name" value='' placeholder="">
+                        </div>
+                        <div class="payment pad_bot pull-right">
+                            <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('rut'); ?></label> 
+                            <input type="text" class="form-control pay_in" name="p_rut" value='' placeholder="">
                         </div>
                         <div class="payment pad_bot pull-right">
                             <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('email'); ?></label>
@@ -458,9 +462,13 @@
                         </select>
                     </div>
                     <div class="pos_client clearfix col-md-6">
-                        <div class="payment pad_bot pull-right">
+                    <div class="payment pad_bot pull-right">
                             <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('name'); ?></label> 
                             <input type="text" class="form-control pay_in" name="p_name" value='' placeholder="">
+                        </div>
+                        <div class="payment pad_bot pull-right">
+                            <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('rut'); ?></label> 
+                            <input type="text" class="form-control pay_in" name="p_rut" value='' placeholder="">
                         </div>
                         <div class="payment pad_bot pull-right">
                             <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('email'); ?></label>

@@ -545,6 +545,14 @@ if ($this->ion_auth->in_group('Doctor')) {
                         </div>
                         <div class="col-md-8 payment pad_bot pull-right">
                             <div class="col-md-3 payment_label"> 
+                                <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('rut'); ?></label>
+                            </div>
+                            <div class="col-md-9"> 
+                                <input type="text" class="form-control pay_in" name="p_rut" value='' placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-8 payment pad_bot pull-right">
+                            <div class="col-md-3 payment_label"> 
                                 <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('email'); ?></label>
                             </div>
                             <div class="col-md-9"> 
@@ -694,6 +702,14 @@ if ($this->ion_auth->in_group('Doctor')) {
                         </div>
                         <div class="col-md-8 payment pad_bot pull-right">
                             <div class="col-md-3 payment_label"> 
+                                <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('rut'); ?></label>
+                            </div>
+                            <div class="col-md-9"> 
+                                <input type="text" class="form-control pay_in" name="p_rut" value='' placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-8 payment pad_bot pull-right">
+                            <div class="col-md-3 payment_label"> 
                                 <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('email'); ?></label>
                             </div>
                             <div class="col-md-9"> 
@@ -769,10 +785,7 @@ if ($this->ion_auth->in_group('Doctor')) {
 
                         </select>
                     </div>
-
-
-
-
+                    
                     <div class="col-md-6 panel">
                         <label for="exampleInputEmail1"> <?php echo lang('appointment'); ?> <?php echo lang('status'); ?></label> 
                         <select class="form-control m-bot15" name="status" value=''> 

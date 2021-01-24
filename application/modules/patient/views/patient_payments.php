@@ -24,6 +24,7 @@
                             <tr>
                                 <th><?php echo lang('patient_id'); ?></th>                        
                                 <th><?php echo lang('name'); ?></th>
+                                <th><?php echo lang('rut'); ?></th>
                                 <th><?php echo lang('phone'); ?></th>
                                 <?php if ($this->ion_auth->in_group(array('admin', 'Accountant', 'Receptionist', 'Laboratorist'))) { ?>
                                     <th><?php echo lang('due_balance'); ?></th>
@@ -74,6 +75,10 @@
                     <div class="form-group col-md-5">
                         <label for="exampleInputEmail1"><?php echo lang('name'); ?></label>
                         <input type="text" class="form-control" name="name" id="exampleInputEmail1" value='' placeholder="">
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="exampleInputEmail1"><?php echo lang('rut'); ?></label>
+                        <input type="text" class="form-control" name="rut" id="exampleInputEmail1" value='' placeholder="">
                     </div>
 
                     <div class="form-group col-md-4">
@@ -487,13 +492,8 @@
 
 </script>
 
-
-
 <script>
     $(document).ready(function () {
         $(".flashmessage").delay(3000).fadeOut(100);
     });
 </script>
-
-
-

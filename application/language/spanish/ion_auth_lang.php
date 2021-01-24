@@ -63,16 +63,16 @@ $lang['group_name_required'] 		= 'Group name is a required field';
 $lang['group_name_admin_not_alter'] = 'Admin group name can not be changed';
 
 // Activation Email
-$lang['email_activation_subject']            = 'Activación de la cuenta';
+$lang['email_activation_subject']  = 'Activación de la cuenta';
 $lang['email_activate_heading']    = 'Activate account for %s';
 $lang['email_activate_subheading'] = 'Please click this link to %s.';
 $lang['email_activate_link']       = 'Activate Your Account';
 // Forgot Password Email
-$lang['email_forgotten_password_subject']    = 'Verificación de contraseña olvidada';
+$lang['email_forgotten_password_subject'] = 'Verificación de contraseña olvidada';
 $lang['email_forgot_password_heading']    = 'Reset Password for %s';
 $lang['email_forgot_password_subheading'] = 'Please click this link to %s.';
 $lang['email_forgot_password_link']       = 'Reset Your Password';
 // New Password Email
-$lang['email_new_password_subject']          = 'Nueva Contraseña';
+$lang['email_new_password_subject']    = 'Nueva Contraseña';
 $lang['email_new_password_heading']    = 'New Password for %s';
 $lang['email_new_password_subheading'] = 'Your password has been reset to: %s';

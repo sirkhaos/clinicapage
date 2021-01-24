@@ -126,6 +126,14 @@
                                                     ?>' placeholder="">
                                                 </div>
                                                 <div class="col-md-6 payment pad_bot">
+                                                    <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('rut'); ?></label>
+                                                    <input type="text" class="form-control pay_in" name="p_rut" value='<?php
+                                                    if (!empty($payment->p_rut)) {
+                                                        echo $payment->p_rut;
+                                                    }
+                                                    ?>' placeholder="">
+                                                </div>
+                                                <div class="col-md-6 payment pad_bot">
                                                     <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('email'); ?></label>
                                                     <input type="text" class="form-control pay_in" name="p_email" value='<?php
                                                     if (!empty($payment->p_email)) {

@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div class="pos_client clearfix">
-                        <div class="col-md-8 payment pad_bot pull-right">
+                    <div class="col-md-8 payment pad_bot pull-right">
                             <div class="col-md-3 payment_label"> 
                                 <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('name'); ?></label>
                             </div>
@@ -54,6 +54,18 @@
                                 <input type="text" class="form-control pay_in" name="p_name" value='<?php
                                 if (!empty($payment->p_name)) {
                                     echo $payment->p_name;
+                                }
+                                ?>' placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-8 payment pad_bot pull-right">
+                            <div class="col-md-3 payment_label"> 
+                                <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('rut'); ?></label>
+                            </div>
+                            <div class="col-md-9"> 
+                                <input type="text" class="form-control pay_in" name="p_rut" value='<?php
+                                if (!empty($payment->p_rut)) {
+                                    echo $payment->p_rut;
                                 }
                                 ?>' placeholder="">
                             </div>
@@ -132,7 +144,7 @@
                             <label for="exampleInputEmail1">  <?php echo lang('doctor'); ?></label>
                         </div>
                         <div class="col-md-9"> 
-                            <select class="form-control m-bot15" id="adoctors" name="doctor" value=''>  
+                            <select class="form-control m-bot15" id="doctors" name="doctor" value=''>  
                                 <?php if (!empty($doctors)) { ?>
                                     <option value="<?php echo $doctors->id; ?>" selected="selected"><?php echo $doctors->name; ?> - <?php echo $doctors->id; ?></option>  
                                 <?php } ?>
@@ -545,9 +557,3 @@
 
     });
 </script>
-
-
-
-
-
-

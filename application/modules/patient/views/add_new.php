@@ -58,6 +58,17 @@
                                             ?>' placeholder="">
                                         </div>
 
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1"><?php echo lang('rut'); ?></label>
+                                            <input type="text" class="form-control" name="rut" id="exampleInputEmail1" value='<?php
+                                            if (!empty($setval)) {
+                                                echo set_value('rut');
+                                            }
+                                            if (!empty($patient->rut)) {
+                                                echo $patient->rut;
+                                            }
+                                            ?>' placeholder="">
+                                        </div>
 
                                         <div class="form-group">
                                             <label for="exampleInputEmail1"><?php echo lang('email'); ?></label>

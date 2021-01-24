@@ -6,7 +6,7 @@
         <section class="">
 
             <header class="panel-heading">
-                <?php echo lang('patient'); ?> <?php echo lang('database'); ?>
+                <?php echo lang('patient'); ?> <?php echo lang('database'); ?> 
                 <div class="col-md-4 no-print pull-right"> 
                     <a data-toggle="modal" href="#myModal">
                         <div class="btn-group pull-right">
@@ -27,6 +27,7 @@
                             <tr>
                                 <th><?php echo lang('patient_id'); ?></th>                        
                                 <th><?php echo lang('name'); ?></th>
+                                <th><?php echo lang('rut'); ?></th>
                                 <th><?php echo lang('phone'); ?></th>
                                 <?php if ($this->ion_auth->in_group(array('admin', 'Accountant', 'Receptionist'))) { ?>
                                     <th><?php echo lang('due_balance'); ?></th>
@@ -44,14 +45,6 @@
                                 border-radius: 100px;
                             }
                         </style>
-
-
-
-
-
-
-
-
                         </tbody>
                     </table>
                 </div>
@@ -62,11 +55,6 @@
 </section>
 <!--main content end-->
 <!--footer start-->
-
-
-
-
-
 
 <!-- Add Patient Modal-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -85,6 +73,11 @@
                     </div>
 
                     <div class="form-group col-md-6">
+                        <label for="exampleInputEmail1"><?php echo lang('rut'); ?></label>
+                        <input type="text" class="form-control" name="rut" id="exampleInputEmail1" value='' placeholder="">
+                    </div>
+
+                    <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"><?php echo lang('email'); ?></label>
                         <input type="text" class="form-control" name="email" id="exampleInputEmail1" value='' placeholder="">
                     </div>
@@ -94,16 +87,16 @@
                         <input type="password" class="form-control" name="password" id="exampleInputEmail1" placeholder="">
                     </div>
 
-
-
                     <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"><?php echo lang('address'); ?></label>
                         <input type="text" class="form-control" name="address" id="exampleInputEmail1" value='' placeholder="">
                     </div>
+
                     <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"><?php echo lang('phone'); ?></label>
                         <input type="text" class="form-control" name="phone" id="exampleInputEmail1" value='' placeholder="">
                     </div>
+
                     <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"><?php echo lang('sex'); ?></label>
                         <select class="form-control m-bot15" name="sex" value=''>
@@ -136,7 +129,6 @@
                         <label><?php echo lang('birth_date'); ?></label>
                         <input class="form-control form-control-inline input-medium default-date-picker" type="text" name="birthdate" value="" placeholder="" readonly="">      
                     </div>
-
 
                     <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"><?php echo lang('blood_group'); ?></label>
@@ -160,8 +152,6 @@
                         </select>
                     </div>
 
-
-
                     <div class="form-group last col-md-6">
                         <label class="control-label">Image Upload</label>
                         <div class="">
@@ -179,7 +169,6 @@
                                     <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash"></i> Remove</a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -194,28 +183,19 @@
                                         </div>
                     -->
 
-
                     <div class="form-group col-md-6">
                         <input type="checkbox" name="sms" value="sms"> <?php echo lang('send_sms') ?><br>
                     </div>
-
 
                     <section class="col-md-12">
                         <button type="submit" name="submit" class="btn btn-info pull-right"><?php echo lang('submit'); ?></button>
                     </section>
                 </form>
-
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div>
 <!-- Add Patient Modal-->
-
-
-
-
-
-
 
 <!-- Edit Patient Modal-->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -234,6 +214,11 @@
                     </div>
 
                     <div class="form-group col-md-6">
+                        <label for="exampleInputEmail1"><?php echo lang('rut'); ?></label>
+                        <input type="text" class="form-control" name="rut" id="exampleInputEmail1" value='' placeholder="">
+                    </div>
+
+                    <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"><?php echo lang('email'); ?></label>
                         <input type="text" class="form-control" name="email" id="exampleInputEmail1" value='' placeholder="">
                     </div>
@@ -243,20 +228,19 @@
                         <input type="password" class="form-control" name="password" id="exampleInputEmail1" placeholder="">
                     </div>
 
-
-
                     <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"><?php echo lang('address'); ?></label>
                         <input type="text" class="form-control" name="address" id="exampleInputEmail1" value='' placeholder="">
                     </div>
+
                     <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"><?php echo lang('phone'); ?></label>
                         <input type="text" class="form-control" name="phone" id="exampleInputEmail1" value='' placeholder="">
                     </div>
+
                     <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"><?php echo lang('sex'); ?></label>
                         <select class="form-control m-bot15" name="sex" value=''>
-
                             <option value="Male" <?php
                             if (!empty($patient->sex)) {
                                 if ($patient->sex == 'Male') {
@@ -286,7 +270,6 @@
                         <input class="form-control form-control-inline input-medium default-date-picker" type="text" name="birthdate" value="" placeholder="" readonly="">      
                     </div>
 
-
                     <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"><?php echo lang('blood_group'); ?></label>
                         <select class="form-control m-bot15" name="bloodgroup" value=''>
@@ -309,8 +292,6 @@
                         </select>
                     </div>
 
-
-
                     <div class="form-group last col-md-6">
                         <label class="control-label">Image Upload</label>
                         <div class="">
@@ -332,7 +313,6 @@
                         </div>
                     </div>
 
-
                     <!--
                     
                     <div class="form-group last col-md-6">
@@ -346,50 +326,24 @@
                     
                     -->
 
-
-
-
-
-
-
-
                     <div class="form-group col-md-6">
                         <input type="checkbox" name="sms" value="sms"> <?php echo lang('send_sms') ?><br>
                     </div>
-
                     <input type="hidden" name="id" value=''>
                     <input type="hidden" name="p_id" value='<?php
                     if (!empty($patient->patient_id)) {
                         echo $patient->patient_id;
                     }
                     ?>'>
-
-
-
-
-
                     <section class="col-md-12">
                         <button type="submit" name="submit" class="btn btn-info pull-right"><?php echo lang('submit'); ?></button>
                     </section>
-
                 </form>
-
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div>
 </div>
 <!-- Edit Patient Modal-->
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg"> 
@@ -413,13 +367,17 @@
                                 <label for="exampleInputEmail1"><?php echo lang('patient_id'); ?>: <span class="patientIdClass"></span></label>
                             </div>
                         </div>
-
                     </div>
+
                     <div class="form-group col-md-4">
                         <label for="exampleInputEmail1"><?php echo lang('name'); ?></label>
                         <div class="nameClass"></div>
                     </div>
 
+                    <div class="form-group col-md-4">
+                        <label for="exampleInputEmail1"><?php echo lang('rut'); ?></label>
+                        <div class="rutClass"></div>
+                    </div>
 
                     <div class="form-group col-md-4">
                         <label for="exampleInputEmail1"><?php echo lang('email'); ?></label>
@@ -456,25 +414,16 @@
                         <div class="birthdateClass"></div>     
                     </div>
 
-
-
-
-
+                    <div class="form-group col-md-4">    
+                    </div>
 
                     <div class="form-group col-md-4">    
                     </div>
-                    <div class="form-group col-md-4">    
-                    </div>
+                    
                     <div class="form-group col-md-4">    
                         <label for="exampleInputEmail1"><?php echo lang('doctor'); ?></label>
                         <div class="doctorClass"></div>
                     </div>
-
-
-
-
-
-
 
                 </form>
 
@@ -483,13 +432,10 @@
     </div>
 </div>
 
-
-
 <script src="common/js/codearistos.min.js"></script>
 
 <!--
 <script>
-
 
     var video = document.getElementById('video');
     // Get access to the camera!
@@ -538,6 +484,7 @@
 
             $('#editPatientForm').find('[name="id"]').val(response.patient.id).end()
             $('#editPatientForm').find('[name="name"]').val(response.patient.name).end()
+            $('#editPatientForm').find('[name="rut"]').val(response.patient.rut).end()
             $('#editPatientForm').find('[name="password"]').val(response.patient.password).end()
             $('#editPatientForm').find('[name="email"]').val(response.patient.email).end()
             $('#editPatientForm').find('[name="address"]').val(response.patient.address).end()
@@ -568,8 +515,6 @@
 
 </script>
 
-
-
 <script type="text/javascript">
 
     $(".table").on("click", ".inffo", function () {
@@ -580,6 +525,7 @@
         $("#img1").attr("src", "uploads/cardiology-patient-icon-vector-6244713.jpg");
         $('.patientIdClass').html("").end()
         $('.nameClass').html("").end()
+        $('.rutClass').html("").end()
         $('.emailClass').html("").end()
         $('.addressClass').html("").end()
         $('.phoneClass').html("").end()
@@ -599,6 +545,7 @@
 
             $('.patientIdClass').append(response.patient.id).end()
             $('.nameClass').append(response.patient.name).end()
+            $('.rutClass').append(response.patient.rut).end()
             $('.emailClass').append(response.patient.email).end()
             $('.addressClass').append(response.patient.address).end()
             $('.phoneClass').append(response.patient.phone).end()
@@ -618,7 +565,6 @@
                 $("#img1").attr("src", response.patient.img_url);
             }
 
-
             $('#infoModal').modal('show');
 
         });
@@ -626,12 +572,7 @@
 
 </script>
 
-
-
-
-
 <script>
-
 
     $(document).ready(function () {
         var table = $('#editable-sample').DataTable({
@@ -680,12 +621,6 @@
     });
 
 </script>
-
-
-
-
-
-
 
 <script>
     $(document).ready(function () {
@@ -739,13 +674,8 @@
     });
 </script>
 
-
-
 <script>
     $(document).ready(function () {
         $(".flashmessage").delay(3000).fadeOut(100);
     });
 </script>
-
-
-
