@@ -70,6 +70,7 @@
                                 ?>' placeholder="">
                             </div>
                         </div>
+                                
                         <div class="col-md-8 payment pad_bot pull-right">
                             <div class="col-md-3 payment_label"> 
                                 <label for="exampleInputEmail1"> <?php echo lang('patient'); ?> <?php echo lang('email'); ?></label>

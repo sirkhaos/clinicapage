@@ -42,6 +42,7 @@ class Patient_model extends CI_model {
         $this->db->order_by('id', 'desc');
 
         $this->db->or_like('name', $search);
+        $this->db->or_like('rut', $search);
         $this->db->or_like('phone', $search);
         $this->db->or_like('address', $search);
 
@@ -116,6 +117,7 @@ class Patient_model extends CI_model {
         $this->db->order_by('id', 'desc');
 
         $this->db->or_like('patient_name', $search);
+        $this->db->or_like('patient_rut', $search);
         $this->db->or_like('patient_phone', $search);
         $this->db->or_like('patient_address', $search);
 
@@ -204,6 +206,7 @@ class Patient_model extends CI_model {
         $this->db->or_like('date_string', $search);
 
         $this->db->or_like('patient_name', $search);
+        $this->db->or_like('patient_rut', $search);
         $this->db->or_like('patient_phone', $search);
         $this->db->or_like('patient_address', $search);
 
