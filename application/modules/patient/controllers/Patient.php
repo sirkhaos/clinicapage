@@ -551,7 +551,7 @@ class Patient extends MX_Controller {
                         $card_number = $this->input->post('card_number');
                         $expire_date = $this->input->post('expire_date');
                         $cvv = $this->input->post('cvv_number');
-$cardholdername= $this->input->post('cardholder');
+                        $cardholdername= $this->input->post('cardholder');
                         $all_details = array(
                             'patient' => $payment_details->patient,
                             'date' => $payment_details->date,
@@ -797,6 +797,7 @@ $cardholdername= $this->input->post('cardholder');
             if (!empty($patient_id)) {
                 $patient_details = $this->patient_model->getPatientById($patient_id);
                 $patient_name = $patient_details->name;
+                $patient_rut = $patient_details->rut;
                 $patient_phone = $patient_details->phone;
                 $patient_address = $patient_details->address;
             } else {
@@ -1101,6 +1102,7 @@ $cardholdername= $this->input->post('cardholder');
             if (!empty($patient_id)) {
                 $patient_details = $this->patient_model->getPatientById($patient_id);
                 $patient_name = $patient_details->name;
+                $patient_rut = $patient_details->name;
                 $patient_phone = $patient_details->phone;
                 $patient_address = $patient_details->address;
             } else {

@@ -380,9 +380,8 @@
                         <input type="text" class="form-control default-date-picker" id="date" readonly="" name="date" id="exampleInputEmail1" value='' placeholder="">
                     </div>
                     <div class="col-md-6 panel">
-                        <label for="exampleInputEmail1">Available Slots</label>
+                        <label for="exampleInputEmail1"><?php echo lang('available_slots'); ?></label>
                         <select class="form-control m-bot15" name="time_slot" id="aslots" value=''> 
-
                         </select>
                     </div>
                     <div class="col-md-6 panel">
