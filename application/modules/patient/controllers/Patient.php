@@ -1111,11 +1111,6 @@ class Patient extends MX_Controller {
                 $patient_address = 0;
             }
 
-
-
-
-
-
             $file_name = $_FILES['img_url']['name'];
             $file_name_pieces = explode('_', $file_name);
             $new_file_name = '';
@@ -1151,6 +1146,7 @@ class Patient extends MX_Controller {
                     'url' => $img_url,
                     'patient' => $patient_id,
                     'patient_name' => $patient_name,
+                    'patient_rut' => $patient_rut,
                     'patient_address' => $patient_address,
                     'patient_phone' => $patient_phone,
                     'date_string' => date('d-m-y', $date),
@@ -1162,6 +1158,7 @@ class Patient extends MX_Controller {
                     'title' => $title,
                     'patient' => $patient_id,
                     'patient_name' => $patient_name,
+                    'patient_rut' => $patient_rut,
                     'patient_address' => $patient_address,
                     'patient_phone' => $patient_phone,
                     'date_string' => date('d-m-y', $date),
