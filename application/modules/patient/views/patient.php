@@ -27,7 +27,7 @@
                             <tr>
                                 <th><?php echo lang('patient_id'); ?></th>                        
                                 <th><?php echo lang('name'); ?></th>
-                                <th><?php echo lang('rut'); ?></th>
+                                <!-- campo rut de la tabla de paciente -->
                                 <th><?php echo lang('phone'); ?></th>
                                 <?php if ($this->ion_auth->in_group(array('admin', 'Accountant', 'Receptionist'))) { ?>
                                     <th><?php echo lang('due_balance'); ?></th>
@@ -171,7 +171,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!--
                                         <div class="form-group last col-md-6">
                                             <div style="text-align:center;" class="col-md-12">
@@ -314,7 +313,6 @@
                     </div>
 
                     <!--
-                    
                     <div class="form-group last col-md-6">
                         <div style="text-align:center;">
                             <video id="video" width="200" height="200" autoplay></video>
@@ -323,7 +321,6 @@
                             Right click on the captured image and save. Then select the saved image from the left side's Select Image button.
                         </div>
                     </div>
-                    
                     -->
 
                     <div class="form-group col-md-6">

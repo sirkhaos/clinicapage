@@ -316,8 +316,6 @@
                     <div class="col-md-6 panel">
                         <label for="exampleInputEmail1"> <?php echo lang('patient'); ?></label> 
                         <select class="form-control m-bot15 pos_select" id="pos_select" name="patient" value=''> 
-
-
                         </select>
                     </div>
                     <div class="pos_client clearfix col-md-6">
@@ -651,8 +649,6 @@
     });
 </script>
 
-
-
 <script>
     $(document).ready(function () {
         $('.pos_client').hide();
@@ -670,14 +666,6 @@
 
 
 </script>
-
-
-
-
-
-
-
-
 
 
 <script type="text/javascript">
@@ -734,9 +722,6 @@
 
     });
 
-
-
-
     $(document).ready(function () {
         $('#date').datepicker({
             format: "dd-mm-yyyy",
@@ -768,28 +753,13 @@
                 $('#aslots').append($('<option>').text('No Further Time Slots').val('Not Selected')).end();
             }
 
-
             // Populate the form fields with the data returned from server
             //  $('#default').find('[name="staff"]').val(response.appointment.staff).end()
         });
 
     }
 
-
-
-
 </script>
-
-
-
-
-
-
-
-
-
-
-
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -846,9 +816,6 @@
 
     });
 
-
-
-
     $(document).ready(function () {
         $('#date1').datepicker({
             format: "dd-mm-yyyy",
@@ -881,15 +848,11 @@
                 $('#aslots1').append($('<option>').text('No Further Time Slots').val('Not Selected')).end();
             }
 
-
             // Populate the form fields with the data returned from server
             //  $('#default').find('[name="staff"]').val(response.appointment.staff).end()
         });
 
     }
-
-
-
 
 </script>
 
@@ -904,9 +867,7 @@
     });
 </script>
 
-
 <script>
-
 
     $(document).ready(function () {
         var table = $('#editable-sample5').DataTable({
@@ -955,7 +916,6 @@
     });
 </script>
 <script>
-
 
     $(document).ready(function () {
         var table = $('#editable-sample6').DataTable({

@@ -214,7 +214,3 @@
         $('#editable-samplee').DataTable();
     });
 </script>
-
-
-
-

@@ -27,11 +27,12 @@
             </style>
 
 
-            <div class="panel-body">
+            <div class="panel-body"> <!--AKI-->
                 <div class="adv-table editable-table ">
                     <?php echo validation_errors(); ?>
                     <?php echo $this->session->flashdata('feedback'); ?>
                 </div>
+                
                 <form role="form" action="appointment/addNew" class="clearfix row" method="post" enctype="multipart/form-data">
                     <div class="col-md-12 panel">
                         <div class="col-md-3 payment_label"> 
@@ -145,7 +146,7 @@
                             <label for="exampleInputEmail1">  <?php echo lang('doctor'); ?></label>
                         </div>
                         <div class="col-md-9"> 
-                            <select class="form-control m-bot15" id="doctors" name="doctor" value=''>  
+                            <select class="form-control m-bot15" id="adoctors" name="doctor" value=''>  
                                 <?php if (!empty($doctors)) { ?>
                                     <option value="<?php echo $doctors->id; ?>" selected="selected"><?php echo $doctors->name; ?> - <?php echo $doctors->id; ?></option>  
                                 <?php } ?>

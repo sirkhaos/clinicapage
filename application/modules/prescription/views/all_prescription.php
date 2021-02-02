@@ -282,7 +282,7 @@ if ($this->ion_auth->in_group('Doctor')) {
                 {
                     extend: 'print',
                     exportOptions: {
-                        columns: [0, 1, 2,3,4],
+                        columns: [0, 1, 2, 3, 4],
                     }
                 },
             ],

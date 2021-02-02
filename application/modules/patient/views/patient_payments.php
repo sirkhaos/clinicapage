@@ -24,7 +24,7 @@
                             <tr>
                                 <th><?php echo lang('patient_id'); ?></th>                        
                                 <th><?php echo lang('name'); ?></th>
-                                <th><?php echo lang('rut'); ?></th>
+                                <!-- campo rut de la tabla de paciente -->
                                 <th><?php echo lang('phone'); ?></th>
                                 <?php if ($this->ion_auth->in_group(array('admin', 'Accountant', 'Receptionist', 'Laboratorist'))) { ?>
                                     <th><?php echo lang('due_balance'); ?></th>
@@ -53,13 +53,6 @@
 </section>
 <!--main content end-->
 <!--footer start-->
-
-
-
-
-
-
-
 
 <!-- Add Patient Modal-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -210,12 +203,6 @@
 </div>
 <!-- Add Patient Modal-->
 
-
-
-
-
-
-
 <!-- Edit Patient Modal-->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
@@ -334,7 +321,6 @@
                         </div>
                     </div>
 
-
                     <div class="form-group last col-md-4">
                         <div style="text-align:center;">
                             <video id="video" width="200" height="200" autoplay></video>
@@ -343,13 +329,6 @@
                             Right click on the captured image and save. Then select the saved image from the left side's Select Image button.
                         </div>
                     </div>
-
-
-
-
-
-
-
 
                     <div class="form-group col-md-3">
                         <input type="checkbox" name="sms" value="sms"> <?php echo lang('send_sms') ?><br>
@@ -361,10 +340,6 @@
                         echo $patient->patient_id;
                     }
                     ?>'>
-
-
-
-
 
                     <section class="col-md-12">
                         <button type="submit" name="submit" class="btn btn-info pull-right"><?php echo lang('submit'); ?></button>
@@ -381,7 +356,6 @@
 <script src="common/js/codearistos.min.js"></script>
 
 <script>
-
 
     var video = document.getElementById('video');
     // Get access to the camera!
@@ -401,8 +375,6 @@
     document.getElementById("snap").addEventListener("click", function () {
         context.drawImage(video, 0, 0, 200, 200);
     });</script>
-
-
 
 <script type="text/javascript">
 
@@ -439,9 +411,7 @@
         });
     });</script>
 
-
 <script>
-
 
     $(document).ready(function () {
        var table = $('#editable-sample').DataTable({

@@ -1,4 +1,3 @@
-
 <!--sidebar end-->
 <!--main content start-->
 <section id="main-content">
@@ -62,9 +61,6 @@
                             </tr>
                         <?php } ?>
 
-
-
-
                         </tbody>
                     </table>
                 </div>
@@ -75,9 +71,6 @@
 </section>
 <!--main content end-->
 <!--footer start-->
-
-
-
 
 <!-- Add Accountant Modal-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -125,12 +118,6 @@
     </div><!-- /.modal-dialog -->
 </div>
 <!-- Add Accountant Modal-->
-
-
-
-
-
-
 
 <!-- Edit Event Modal-->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -206,10 +193,8 @@
                                                     $('#myModal2').modal('show');
                                                 });
                                             });
-                                        });</script>
-
-
-
+                                        });
+</script>
 
 <script>
     $(document).ready(function () {
@@ -252,11 +237,6 @@
                 .appendTo('.custom_buttons');
     });
 </script>
-
-
-
-
-
 
 <script>
     $(document).ready(function () {
