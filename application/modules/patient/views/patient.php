@@ -27,6 +27,7 @@
                             <tr>
                                 <th><?php echo lang('patient_id'); ?></th>                        
                                 <th><?php echo lang('name'); ?></th>
+                                
                                 <!-- campo rut de la tabla de paciente -->
                                 <th><?php echo lang('phone'); ?></th>
                                 <?php if ($this->ion_auth->in_group(array('admin', 'Accountant', 'Receptionist'))) { ?>
@@ -45,6 +46,7 @@
                                 border-radius: 100px;
                             }
                         </style>
+
                         </tbody>
                     </table>
                 </div>

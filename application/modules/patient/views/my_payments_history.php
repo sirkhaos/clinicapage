@@ -608,15 +608,9 @@
                                 ?>
                             <?php } ?>
 
-
-
                             </tbody>
 
                         </table>
-
-
-
-
 
                         <div class="row">
                             <div class="col-lg-8 invoice-block pull-right total_section">
@@ -628,7 +622,6 @@
                             </div>
                         </div>
 
-
                         <div class="text-center invoice-btn">
 
                             <a class="btn btn-info btn-lg invoice_button" onclick="javascript:window.print();"><i class="fa fa-print"></i> Print </a>
@@ -636,8 +629,6 @@
 
 
                     </div>
-
-
 
                 </div>
             </div>

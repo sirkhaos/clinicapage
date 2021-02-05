@@ -255,8 +255,6 @@ class Patient extends MX_Controller {
 
                     //end
 
-
-
                     $this->session->set_flashdata('feedback', lang('added'));
                 }
                 //    }
@@ -483,12 +481,8 @@ class Patient extends MX_Controller {
             $data['gateway'] = $this->finance_model->getGatewayByName($data['settings']->payment_gateway);
         }
 
-
-
         $data['patient'] = $this->patient_model->getPatientByid($patient);
         $data['settings'] = $this->settings_model->getSettings();
-
-
 
         $this->load->view('home/dashboard'); // just the header file
         $this->load->view('my_payments_history', $data);
@@ -498,7 +492,6 @@ class Patient extends MX_Controller {
     function deposit() {
         $id = $this->input->post('id');
 
-
         if ($this->ion_auth->in_group(array('Patient'))) {
             $patient_ion_id = $this->ion_auth->get_user_id();
             $patient = $this->patient_model->getPatientByIonUserId($patient_ion_id)->id;
@@ -506,8 +499,6 @@ class Patient extends MX_Controller {
             $this->session->set_flashdata('feedback', lang('undefined_patient_id'));
             redirect('patient/myPaymentsHistory');
         }
-
-
 
         $payment_id = $this->input->post('payment_id');
         $date = time();
@@ -1102,7 +1093,7 @@ class Patient extends MX_Controller {
             if (!empty($patient_id)) {
                 $patient_details = $this->patient_model->getPatientById($patient_id);
                 $patient_name = $patient_details->name;
-                $patient_rut = $patient_details->name;
+                $patient_rut = $patient_details->rut;
                 $patient_phone = $patient_details->phone;
                 $patient_address = $patient_details->address;
             } else {
@@ -1560,8 +1551,6 @@ class Patient extends MX_Controller {
         $medical_histories = $this->patient_model->getMedicalHistoryByPatientId($id);
         $patient_materials = $this->patient_model->getPatientMaterialByPatientId($id);
 
-
-
         foreach ($appointments as $appointment) {
 
             $doctor_details = $this->doctor_model->getDoctorById($appointment->doctor);
@@ -1596,7 +1585,6 @@ class Patient extends MX_Controller {
                                             </div>
                                         </div>';
         }
-
 
         foreach ($data['prescriptions'] as $prescription) {
             $doctor_details = $this->doctor_model->getDoctorById($prescription->doctor);
@@ -1710,10 +1698,6 @@ class Patient extends MX_Controller {
                                         </div>';
         }
 
-
-
-
-
         if (!empty($timeline)) {
             krsort($timeline);
             $timeline_value = '';
@@ -1721,20 +1705,6 @@ class Patient extends MX_Controller {
                 $timeline_value .= $value;
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         $all_appointments = '';
         foreach ($appointments as $appointment) {
@@ -1745,8 +1715,6 @@ class Patient extends MX_Controller {
             } else {
                 $appointment_doctor = "";
             }
-
-
 
             $patient_appointments = '<tr class = "">
 
@@ -1764,14 +1732,9 @@ class Patient extends MX_Controller {
             $all_appointments .= $patient_appointments;
         }
 
-
-
-
         if (empty($all_appointments)) {
             $all_appointments = '';
         }
-
-
 
         $all_case = '';
 
@@ -1784,7 +1747,6 @@ class Patient extends MX_Controller {
 
             $all_case .= $patient_case;
         }
-
 
         if (empty($all_case)) {
             $all_case = '';
@@ -1806,7 +1768,7 @@ class Patient extends MX_Controller {
                     $medicine_id = explode('***', $value);
                     $medicine_details = $this->medicine_model->getMedicineById($medicine_id[0]);
                     if (!empty($medicine_details)) {
-                        $medicine_name_with_dosage = $medicine_details->name . ' -' . $medicine_id[1];
+                        $medicine_name_with_dosage = $medicine_details->name . ' - ' . $medicine_id[1];
                         $medicine_name_with_dosage = $medicine_name_with_dosage . ' | ' . $medicine_id[3] . '<br>';
                         rtrim($medicine_name_with_dosage, ',');
                         $medicinelist .= '<p>' . $medicine_name_with_dosage . '</p>';
@@ -1821,7 +1783,7 @@ class Patient extends MX_Controller {
                                                     <td>' . date('m/d/Y', $prescription->date) . '</td>
                                                     <td>' . $prescription_doctor . '</td>
                                                     <td>' . $medicinelist . '</td>
-                                                         <td>' . $option1 . '</td>
+                                                    <td>' . $option1 . '</td>
                                                 </tr>';
 
             $all_prescription .= $prescription_case;
@@ -1934,9 +1896,6 @@ class Patient extends MX_Controller {
 
             </header> 
 
-
-
-
             <aside class="profile-nav">
                 <section class="">
                     <div class="user-heading round">
@@ -1958,12 +1917,7 @@ class Patient extends MX_Controller {
                 </section>
             </aside>
 
-
         </section>
-
-
-
-
 
         <section class="col-md-9">
             <header class="panel-heading clearfix">
@@ -2028,10 +1982,7 @@ class Patient extends MX_Controller {
                         <div id="home" class="tab-pane">
                             <div class="">
 
-
-
                                 <div class="adv-table editable-table ">
-
 
                                     <table class="table table-striped table-hover table-bordered" id="">
                                         <thead>
@@ -2047,18 +1998,14 @@ class Patient extends MX_Controller {
                                         </tbody>
                                     </table>
 
-
                                 </div>
                             </div>
                         </div>
-            
+
                                     <div id="prescription" class="tab-pane">
                                            <div class="">
 
-
-
                                        <div class="adv-table editable-table ">
-
 
                                     <table class="table table-striped table-hover table-bordered" id="">
                                         <thead>
@@ -2074,7 +2021,6 @@ class Patient extends MX_Controller {
                                             ' . $all_prescription . '
                                         </tbody>
                                     </table>
-
 
                                 </div>
                             </div>
@@ -2116,7 +2062,6 @@ class Patient extends MX_Controller {
                             </div>
                         </div>
 
-
                         <div id="profile" class="tab-pane"> <div class="">
 
                                 <div class="adv-table editable-table ">
@@ -2152,7 +2097,6 @@ class Patient extends MX_Controller {
 
 </section>';
 
-
         echo json_encode($data);
     }
 
@@ -2180,4 +2124,3 @@ class Patient extends MX_Controller {
 
 /* End of file patient.php */
     /* Location: ./application/modules/patient/controllers/patient.php */
-    

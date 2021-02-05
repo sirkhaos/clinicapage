@@ -189,9 +189,6 @@
                                         </tbody>
                                     </table>
 
-
-
-
                                     <!--
                                                                         <form role="form" action="patient/addMedicalHistory" class="clearfix" method="post" enctype="multipart/form-data">
                                                                             <div class="form-group col-md-12">
