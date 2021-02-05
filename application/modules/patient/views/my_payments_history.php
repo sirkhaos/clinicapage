@@ -226,11 +226,6 @@
                 }
                 ?>
 
-
-
-
-
-
                 <section class="panel">
                     <div class="weather-bg">
                         <div class="panel-body">

@@ -45,9 +45,6 @@
 <!--main content end-->
 <!--footer start-->
 
-
-
-
 <!-- Add Patient Material Modal-->
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
@@ -86,10 +83,7 @@
 </div>
 <!-- Add Patient Modal-->
 
-
 <script src="common/js/codearistos.min.js"></script>
-
-
 
 <script>
     $(document).ready(function () {
@@ -97,10 +91,7 @@
     });
 </script>
 
-
 <script>
-
-
     $(document).ready(function () {
         var table = $('#editable-sample').DataTable({
             responsive: true,
@@ -149,8 +140,6 @@
         table.buttons().container()
                 .appendTo('.custom_buttons');
     });
-
-
 </script>
 <script>
     $(document).ready(function () {
@@ -174,10 +163,6 @@
                 },
                 cache: true
             }
-
         });
-    
-
-
     });
 </script>

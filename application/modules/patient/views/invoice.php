@@ -31,7 +31,6 @@
 
                         <?php if (!empty($payment->patient)) { ?>
 
-
                             <div class="col-lg-4 col-sm-4">
                                 <h4><?php echo lang('bill_to'); ?>:</h4>
                                 <p>
@@ -49,7 +48,6 @@
                                     ?>
                                 </p>
                             </div>
-
 
                         <?php } ?>
 
@@ -72,9 +70,6 @@
                             <span><strong>Referred By Doctor:</strong></span> <span><?php echo $this->db->get_where('doctor', array('id' => $payment->doctor))->row()->name ?></span>
                         <?php } ?>
                     </div>
-
-
-
 
                     <table class="table table-striped table-hover">
 
@@ -154,14 +149,12 @@
                         </div>
                     </div>
 
-
                     <div class="text-center invoice-btn">
                         <?php if ($this->ion_auth->in_group(array('admin', 'Accountant'))) { ?>
                             <a href="finance/editPayment?id=<?php echo $payment->id; ?>" class="btn btn-info btn-lg invoice_button"><i class="fa fa-edit"></i> Edit Invoice </a>
                         <?php } ?>
                         <a class="btn btn-info btn-lg invoice_button" onclick="javascript:window.print();"><i class="fa fa-print"></i> Print </a>
                     </div>
-
 
                 </div>
 
@@ -188,7 +181,6 @@
                     -->
                     <div class="panel-body no-print">
 
-
                         <a href="finance/addPaymentView">
                             <div class="btn-group">
                                 <button id="" class="btn green">
@@ -199,13 +191,6 @@
                     </div>
 
                 </div>
-
-
-
-
-
-
-
 
             </div>
         </section>

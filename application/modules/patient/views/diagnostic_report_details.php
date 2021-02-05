@@ -1,5 +1,3 @@
-
-
 <!--main content start-->
 <section id="main-content">
     <section class="wrapper site-min-height">
@@ -40,7 +38,6 @@
 
                         </style>
 
-
                         <?php $patient_info = $this->db->get_where('patient', array('id' => $payment->patient))->row(); ?>
 
                         <tr class="">
@@ -59,7 +56,6 @@
                             <td><?php echo date('d/m/y', $payment->date); ?></td>
 
                         </tr>
-
 
                         <tr class="">
                             <td><?php echo lang('patient_id'); ?></td>
@@ -84,7 +80,6 @@
                             </td>
 
                         </tr>
-
 
                         <tr class="">
                             <td><h4> <?php echo lang('diagnostic_test'); ?></h4></td>
@@ -112,16 +107,10 @@
 
                         </tr>
 
-
-
                         </tr>
 
                         </tbody>
                     </table>
-
-
-
-
 
                     <?php if ($this->ion_auth->in_group(array('admin', 'Laboratorist', 'Doctor'))) { ?>
                         <div class="panel-body col-md-12 no-print">
@@ -158,7 +147,6 @@
                                 }
                                 ?>">
 
-
                                 <section class="">
                                     <button type="submit" name="submit" class="btn btn-info"><?php echo lang('submit'); ?></button>
                                 </section>
@@ -190,9 +178,7 @@
                         </div>
                     <?php } ?>
 
-
                 </div>
-
 
                 <div class="panel col-md-5">
                     <div class="row invoice-list">
@@ -212,17 +198,7 @@
                             </h4>
                         </div>
 
-
-
-
-
-
-
-
                     </div>
-
-
-
 
                     <table class="table table-striped table-hover">
 
@@ -267,7 +243,6 @@
 
                         </tr>
 
-
                         <tr class="">
                             <td><?php echo lang('patient_id'); ?></td>
                             <td>
@@ -292,7 +267,6 @@
 
                         </tr>
 
-
                         <tr class="">
                             <td><?php echo lang('diagnostic_test_result'); ?></td>
                             <td>
@@ -306,29 +280,16 @@
 
                         </tr>
 
-
-
                         </tr>
 
                         </tbody>
                     </table>
 
-
                     <div class="text-center invoice-btn">
                         <a class="btn btn-info btn-lg invoice_button" onclick="javascript:window.print();"><i class="fa fa-print"></i> Print </a>
                     </div>
 
-
                 </div>
-
-
-
-
-
-
-
-
-
 
             </div>
         </section>
@@ -344,4 +305,3 @@
                                 $(".flashmessage").delay(3000).fadeOut(100);
                             });
 </script>
-

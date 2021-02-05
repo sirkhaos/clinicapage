@@ -344,13 +344,11 @@ class Patient extends MX_Controller {
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
-
         // Validating Name Field
         $this->form_validation->set_rules('invoice', 'Invoice', 'trim|required|min_length[1]|max_length[100]|xss_clean');
         // Validating Password Field
 
         $this->form_validation->set_rules('report', 'Report', 'trim|min_length[1]|max_length[10000]|xss_clean');
-
 
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('feedback', lang('validation_error'));
@@ -1264,6 +1262,7 @@ class Patient extends MX_Controller {
                 $info[] = array(
                     $patient->id,
                     $patient->name,
+                    $patient->rut,
                     $patient->phone,
                     $this->settings_model->getSettings()->currency . $this->patient_model->getDueBalanceByPatientId($patient->id),
                     $options1 . ' ' . $options6 . ' ' . $options3 . ' ' . $options4 . ' ' . $options5,
@@ -1275,6 +1274,7 @@ class Patient extends MX_Controller {
                 $info[] = array(
                     $patient->id,
                     $patient->name,
+                    $patient->rut,
                     $patient->phone,
                     $this->settings_model->getSettings()->currency . $this->patient_model->getDueBalanceByPatientId($patient->id),
                     $options1 . ' ' . $options6 . ' ' . $options4,
@@ -1286,6 +1286,7 @@ class Patient extends MX_Controller {
                 $info[] = array(
                     $patient->id,
                     $patient->name,
+                    $patient->rut, //add rut
                     $patient->phone,
                     $options1 . ' ' . $options6 . ' ' . $options3,
                         //  $options2
@@ -1690,7 +1691,6 @@ class Patient extends MX_Controller {
                                                                 
                                                                  <h4>' . $patient_material->title . '</h4>
                                                             
-                                                                
                                                         </div>
                                                     </div> 
                                                 </div>

@@ -1,5 +1,3 @@
-
-
 <!--sidebar end-->
 <!--main content start-->
 <section id="main-content">
@@ -12,9 +10,6 @@
                 </div>
 
             </header> 
-
-
-
 
             <aside class="profile-nav">
                 <section class="">
@@ -45,12 +40,7 @@
                 </section>
             </aside>
 
-
         </section>
-
-
-
-
 
         <section class="col-md-9">
             <header class="panel-heading clearfix">
@@ -159,7 +149,6 @@
 
                                 <div class="adv-table editable-table ">
 
-
                                     <table class="table table-striped table-hover table-bordered" id="">
                                         <thead>
                                             <tr>
@@ -210,8 +199,6 @@
                                                                         </form>
                                     
                                     -->
-
-
 
                                 </div>
                             </div>
@@ -269,7 +256,6 @@
                                                             }
                                                         }
                                                         ?>
-
 
                                                     </td>
                                                     <td class="no-print">
@@ -333,8 +319,6 @@
                                 </div>
                             </div>
                         </div>
-
-
 
                         <div id="profile" class="tab-pane"> <div class="">
                                 <div class=" no-print">
@@ -468,17 +452,12 @@
 
         </section>
 
-
-
     </section>
     <!-- page end-->
 </section>
 </section>
 <!--main content end-->
 <!--footer start-->
-
-
-
 
 <!-- Add Patient Material Modal-->
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -512,7 +491,6 @@
     </div><!-- /.modal-dialog -->
 </div>
 <!-- Add Patient Modal-->
-
 
 <!-- Add Medical History Modal-->
 <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -594,7 +572,6 @@ if ($this->ion_auth->in_group('Doctor')) {
 }
 ?>
 
-
 <!-- Add Appointment Modal-->
 <div class="modal fade" id="addAppointmentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg"">
@@ -618,7 +595,6 @@ if ($this->ion_auth->in_group('Doctor')) {
 
                         </select>
                     </div>
-
 
                     <div class="col-md-4 panel">
                         <label for="exampleInputEmail1"> <?php echo lang('date'); ?></label>
@@ -655,9 +631,6 @@ if ($this->ion_auth->in_group('Doctor')) {
                         <input type="text" class="form-control" name="remarks" id="exampleInputEmail1" value='' placeholder="">
                     </div>
 
-
-
-
                     <div class="col-md-5 panel">
                         <input type="checkbox" name="sms" value="sms"> <?php echo lang('send_sms') ?><br>
                     </div>
@@ -681,12 +654,6 @@ if ($this->ion_auth->in_group('Doctor')) {
     </div><!-- /.modal-dialog -->
 </div>
 <!-- Add Appointment Modal-->
-
-
-
-
-
-
 
 <!-- Edit Event Modal-->
 <div class="modal fade" id="editAppointmentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -712,7 +679,6 @@ if ($this->ion_auth->in_group('Doctor')) {
 
                         </select>
                     </div>
-
 
                     <div class="col-md-4 panel"> 
                         <label for="exampleInputEmail1"> <?php echo lang('date'); ?></label>
@@ -747,14 +713,9 @@ if ($this->ion_auth->in_group('Doctor')) {
                         <input type="text" class="form-control" name="remarks" id="exampleInputEmail1" value='' placeholder="">
                     </div>
 
-
-
-
                     <div class="col-md-6 panel">
                         <input type="checkbox" name="sms" value="sms"> <?php echo lang('send_sms') ?><br>
                     </div>
-
-
 
                     <input type="hidden" name="redirect" value='patient/medicalHistory?id=<?php echo $patient->id; ?>'>>
                     <input type="hidden" name="id" id="appointment_id" value=''>
@@ -770,9 +731,6 @@ if ($this->ion_auth->in_group('Doctor')) {
     </div><!-- /.modal-dialog -->
 </div>
 <!-- Edit Event Modal-->
-
-
-
 
 <!-- Edit Patient Modal-->
 <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -799,8 +757,6 @@ if ($this->ion_auth->in_group('Doctor')) {
                         <label for="exampleInputEmail1"><?php echo lang('change'); ?><?php echo lang('password'); ?></label>
                         <input type="password" class="form-control" name="password" id="exampleInputEmail1" placeholder="">
                     </div>
-
-
 
                     <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"><?php echo lang('address'); ?></label>
@@ -843,7 +799,6 @@ if ($this->ion_auth->in_group('Doctor')) {
                         <input class="form-control form-control-inline input-medium default-date-picker" type="text" name="birthdate" value="" placeholder="" readonly="">      
                     </div>
 
-
                     <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"><?php echo lang('blood_group'); ?></label>
                         <select class="form-control m-bot15" name="bloodgroup" value=''>
@@ -869,8 +824,6 @@ if ($this->ion_auth->in_group('Doctor')) {
                         </select>
                     </div>
 
-
-
                     <div class="form-group last col-md-6">
                         <label class="control-label">Image Upload</label>
                         <div class="">
@@ -892,7 +845,6 @@ if ($this->ion_auth->in_group('Doctor')) {
                         </div>
                     </div>
 
-
                     <!--
                     
                     <div class="form-group last col-md-6">
@@ -905,13 +857,6 @@ if ($this->ion_auth->in_group('Doctor')) {
                     </div>
                     
                     -->
-
-
-
-
-
-
-
 
                     <div class="form-group col-md-6">
                         <input type="checkbox" name="sms" value="sms"> <?php echo lang('send_sms') ?><br>
@@ -926,12 +871,6 @@ if ($this->ion_auth->in_group('Doctor')) {
                     }
                     ?>'>
 
-
-
-
-
-
-
                     <section class="col-md-12">
                         <button type="submit" name="submit" class="btn btn-info pull-right"><?php echo lang('submit'); ?></button>
                     </section>
@@ -944,9 +883,7 @@ if ($this->ion_auth->in_group('Doctor')) {
 </div>
 <!-- Edit Patient Modal-->
 
-
 <style>
-
 
     thead {
         background: #f1f1f1; 
@@ -965,11 +902,7 @@ if ($this->ion_auth->in_group('Doctor')) {
         min-height: 1000px;
     }
 
-
-
-
 </style>
-
 
 <script src="common/js/codearistos.min.js"></script>
 <script type="text/javascript">
@@ -998,7 +931,6 @@ if ($this->ion_auth->in_group('Doctor')) {
                                                     });
 </script>
 
-
 <script type="text/javascript">
     $(document).ready(function () {
         $(".editPrescription").click(function (e) {
@@ -1024,7 +956,6 @@ if ($this->ion_auth->in_group('Doctor')) {
         });
     });
 </script>
-
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -1057,9 +988,6 @@ if ($this->ion_auth->in_group('Doctor')) {
                 // $('.js-example-basic-single.doctor').val(response.appointment.doctor).trigger('change');
                 $('.js-example-basic-single.patient').val(response.appointment.patient).trigger('change');
 
-
-
-
                 var date = $('#date1').val();
                 var doctorr = $('#adoctors1').val();
                 var appointment_id = $('#appointment_id').val();
@@ -1090,17 +1018,6 @@ if ($this->ion_auth->in_group('Doctor')) {
         });
     });
 </script>
-
-
-
-
-
-
-
-
-
-
-
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -1156,9 +1073,6 @@ if ($this->ion_auth->in_group('Doctor')) {
 
     });
 
-
-
-
     $(document).ready(function () {
         $('#date').datepicker({
             format: "dd-mm-yyyy",
@@ -1197,21 +1111,7 @@ if ($this->ion_auth->in_group('Doctor')) {
 
     }
 
-
-
-
 </script>
-
-
-
-
-
-
-
-
-
-
-
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -1268,9 +1168,6 @@ if ($this->ion_auth->in_group('Doctor')) {
 
     });
 
-
-
-
     $(document).ready(function () {
         $('#date1').datepicker({
             format: "dd-mm-yyyy",
@@ -1303,15 +1200,11 @@ if ($this->ion_auth->in_group('Doctor')) {
                 $('#aslots1').append($('<option>').text('No Further Time Slots').val('Not Selected')).end();
             }
 
-
             // Populate the form fields with the data returned from server
             //  $('#default').find('[name="staff"]').val(response.appointment.staff).end()
         });
 
     }
-
-
-
 
 </script>
 
@@ -1349,8 +1242,6 @@ if ($this->ion_auth->in_group('Doctor')) {
     });
 </script>
 
-
-
 <script type="text/javascript">
 
     $(document).ready(function () {
@@ -1382,7 +1273,6 @@ if ($this->ion_auth->in_group('Doctor')) {
                     $("#img").attr("src", response.patient.img_url);
                 }
 
-
                 $('.js-example-basic-single.doctor').val(response.patient.doctor).trigger('change');
                 $('#infoModal').modal('show');
             });
@@ -1392,7 +1282,6 @@ if ($this->ion_auth->in_group('Doctor')) {
 
 <script>
     $(document).ready(function () {
-
 
         $("#adoctors").select2({
             placeholder: '<?php echo lang('select_doctor'); ?>',
@@ -1446,9 +1335,3 @@ if ($this->ion_auth->in_group('Doctor')) {
         $(".flashmessage").delay(3000).fadeOut(100);
     });
 </script>
-
-
-
-
-
-

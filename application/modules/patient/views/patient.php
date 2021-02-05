@@ -20,14 +20,13 @@
             <div class="panel-body">
 
                 <div class="adv-table editable-table ">
-
                     <div class="space15"></div>
                     <table class="table table-striped table-hover table-bordered" id="editable-sample">
                         <thead>
                             <tr>
                                 <th><?php echo lang('patient_id'); ?></th>                        
                                 <th><?php echo lang('name'); ?></th>
-                                
+                                <th><?php echo lang('rut'); ?></th>
                                 <!-- campo rut de la tabla de paciente -->
                                 <th><?php echo lang('phone'); ?></th>
                                 <?php if ($this->ion_auth->in_group(array('admin', 'Accountant', 'Receptionist'))) { ?>
@@ -173,6 +172,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!--
                                         <div class="form-group last col-md-6">
                                             <div style="text-align:center;" class="col-md-12">
@@ -187,7 +187,6 @@
                     <div class="form-group col-md-6">
                         <input type="checkbox" name="sms" value="sms"> <?php echo lang('send_sms') ?><br>
                     </div>
-
                     <section class="col-md-12">
                         <button type="submit" name="submit" class="btn btn-info pull-right"><?php echo lang('submit'); ?></button>
                     </section>
@@ -559,13 +558,10 @@
             } else {
                 $('.doctorClass').append('').end()
             }
-
             if (typeof response.patient.img_url !== 'undefined' && response.patient.img_url != '') {
                 $("#img1").attr("src", response.patient.img_url);
             }
-
             $('#infoModal').modal('show');
-
         });
     });
 
@@ -577,7 +573,6 @@
         var table = $('#editable-sample').DataTable({
             responsive: true,
             //   dom: 'lfrBtip',
-
             "processing": true,
             "serverSide": true,
             "searchable": true,
@@ -609,7 +604,6 @@
             ],
             iDisplayLength: 100,
             "order": [[0, "desc"]],
-
             "language": {
                 "lengthMenu": "_MENU_",
                 search: "_INPUT_",
@@ -618,7 +612,6 @@
         });
         table.buttons().container().appendTo('.custom_buttons');
     });
-
 </script>
 
 <script>

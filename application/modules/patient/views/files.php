@@ -129,9 +129,6 @@
 <!--main content end-->
 <!--footer start-->
 
-
-
-
 <!-- Add Patient Material Modal-->
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
@@ -163,7 +160,6 @@
     </div><!-- /.modal-dialog -->
 </div>
 <!-- Add Patient Modal-->
-
 
 <!-- Add Department Modal-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -305,8 +301,6 @@ if ($this->ion_auth->in_group('Doctor')) {
 </div>
 <!-- Add Prescription Modal-->
 
-
-
 <!-- Edit Prescription Modal-->
 <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
@@ -360,7 +354,6 @@ if ($this->ion_auth->in_group('Doctor')) {
                         </div>
                     </div>
 
-                    
                     <input type="hidden" name="id" value=''>
                     <section class="">
                         <button type="submit" name="submit" class="btn btn-info submit_button"><?php echo lang('submit'); ?></button>
@@ -371,8 +364,6 @@ if ($this->ion_auth->in_group('Doctor')) {
     </div><!-- /.modal-dialog -->
 </div>
 <!-- Edit Prescription Modal-->
-
-
 
 <script src="common/js/codearistos.min.js"></script>
 <script type="text/javascript">
@@ -396,7 +387,6 @@ if ($this->ion_auth->in_group('Doctor')) {
                                             });
                                         });
 </script>
-
 
 <script type="text/javascript">
                                         $(document).ready(function () {

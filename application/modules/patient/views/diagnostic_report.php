@@ -1,4 +1,3 @@
-
 <!--sidebar end-->
 <!--main content start-->
 <section id="main-content">
@@ -39,12 +38,10 @@
 
                         </style>
 
-
                         <?php foreach ($payments as $payment) { ?>
                             <?php $patient_info = $this->db->get_where('patient', array('id' => $payment->patient))->row(); ?>
 
                             <tr class="">
-
 
                                 <td>
                                     <?php
@@ -92,7 +89,6 @@
 
                                 </td>
 
-
                                 <td class="no-print"> 
                                     <?php if ($this->ion_auth->in_group(array('admin', 'Doctor', 'Laboratorist', 'Nurse', 'Patient'))) { ?>
                                         <a class="btn btn-info btn-xs editbutton" title="<?php echo lang('edit'); ?>" href="patient/report?id=<?php echo $payment->id; ?>"><i class="fa fa-eye"> <?php echo lang('details'); ?> </i></a>
@@ -111,8 +107,6 @@
 </section>
 <!--main content end-->
 <!--footer start-->
-
-
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="common/js/codearistos.min.js"></script>
@@ -148,7 +142,6 @@
                 "lengthMenu": "_MENU_ records per page",
                 "url": "common/assets/DataTables/languages/<?php echo $this->language; ?>.json"
             }
-
 
         });
     });
